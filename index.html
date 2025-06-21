@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>LzyCrazy Dashboard</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!--------------------------------------------------------------------------------------------------------->
+  <div class="container">
+    <!------------------------------------------------------------------------------------------------------->
+    <div class="sidebar">
+      <div class="sidebar-header">
+        <img src="images/My.jpg" alt="Logo" class="sidebar-logo" />
+        <h3>LzyCrazy</h3>
+      </div>
+      <nav class="sidebar-nav">
+        <a href="#" class="active"><i class="fas fa-tachometer-alt"></i> Dashboard</a>
+        <a href="#"><i class="fas fa-users"></i> Users</a>
+        <a href="#"><i class="fas fa-chart-line"></i> Analytics</a>
+        <a href="#"><i class="fas fa-ad"></i> Ads</a>
+        <a href="#"><i class="fas fa-cog"></i> Settings</a>
+      </nav>
+      <button class="logout-btn"><i class="fas fa-sign-out-alt"></i> Sign Out</button>
+    </div>
+
+    <!--------------------------------------------------------------------------------------------------------->
+    <div class="main-content">
+    <!------------------------------------------------------------------------------------------------------->
+      <header class="header">
+        <div class="profile">
+          <img src="images/My.jpg" alt="User" />
+          <div>
+            <strong>Pawan Gangwar</strong><br/>
+            <small>ID:88YUI9@</small>
+          </div>
+        </div>
+        <div class="logoo"><img src="images/logo.jpg" alt="logo" style="width: 150px; height: 60px;"></div>
+        <div class="header-icons">
+          <span><i class="fas fa-phone"></i></span>
+          <span><i class="fas fa-video"></i></span>
+          <span><i class="fas fa-bell"></i></span>
+        </div>
+      </header>
+
+      <!------------------------------------------------------------------------------------------------------->
+      <h2 class="title">LzyCrazy Real-Time Engagement Dashboard</h2>
+
+      <!------------------------------------------------------------------------------------------------------->
+      <div class="country-select-wrapper">
+        <label for="countrySelect" class="country-label">Select Country:</label>
+        <select id="countrySelect" class="country-dropdown" onchange="updateDashboard()">
+          <option value="india">🇮🇳 India</option>
+          <option value="usa">🇺🇸 USA</option>
+          <option value="germany">🇩🇪 Germany</option>
+          <option value="brazil">🇧🇷 Brazil</option>
+          <option value="japan">🇯🇵 Japan</option>
+        </select>
+      </div>
+
+      <!------------------------------------------------------------------------------------------------------------>
+      <div class="top-stats">
+        <div class="card">
+          <p class="live"><i class="fas fa-circle"></i> Live</p>
+          <p class="label">Total Users</p>
+          <p id="totalUsers" class="value">000</p>
+        </div>
+        <div class="card highlight">
+          <p class="live green"><i class="fas fa-circle"></i> Live</p>
+          <p class="label">Realtime Users</p>
+          <p id="realtimeUsers" class="value green">00</p>
+        </div>
+      </div>
+<!------------------------------------------------------------------------------------------------------------------->
+      <div class="mini-cards-container">
+        <img src="images/money.jpg" alt="Revenue" class="money-img" />
+        <div class="money-stat">
+            <h3>Total Revenue</h3>
+            <p class="money-value">$24,568</p>
+            <img id="rev" src="images/revnicon.webp" alt="logo" >
+          </div>
+          <div class="money-stat">
+            <h3>Sales Growth</h3>
+            <p class="money-value">45.2%</p>
+            <img  id="sale" src="images/51622661.jpg" alt="logo">
+          </div> 
+        <div class="mini-card card-blue">
+          <p class="live"><i class="fas fa-circle"></i></p>
+          <p>Total User Ads</p>
+          <p id="ads" class="count">0</p>
+        </div>
+        <div class="mini-card card-green">
+          <p class="live"><i class="fas fa-circle"></i></p>
+          <p>Business Profile</p>
+          <p id="profiles" class="count">0</p>
+        </div>
+        <div class="mini-card card-purple">
+          <p class="live"><i class="fas fa-circle"></i></p>
+          <p>Banner Ads</p>
+          <p id="banner" class="count">0</p>
+        </div>
+        <div class="mini-card card-red">
+          <p class="live"><i class="fas fa-circle"></i></p>
+          <p>Video Ads</p>
+          <p id="video" class="count">0</p>
+        </div>
+        <div class="mini-card card-yellow">
+          <p class="live"><i class="fas fa-circle"></i></p>
+          <p>Home Ads</p>
+          <p id="home" class="count">0</p>
+        </div>
+      </div>
+  <script src="script.js"></script>
+</body>
+</html>
